@@ -8,7 +8,8 @@
 OICQ群号:696686213
 
 参考资料:
-语义化版本  https://semver.org/lang/zh-CN/
+
+1.语义化版本  https://semver.org/lang/zh-CN/
 
 相关地址:
 
