@@ -1,5 +1,5 @@
-# IM
-项目地址:https://github.com/AlinaNext/IM
+# Ms
+项目地址:https://github.com/AlinaNext/MsIM
 
 介绍:主要基于php+html运行(本地应用为次)
 
