@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>首页-快速安装</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.css" />
+  <style>
+    .header {
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 200%;
+      color: #333;
+      margin-top: 30px;
+    }
+    .header p {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.js"></script>
+<div class="header">
+  <div class="am-g">
+    <h1>Ms IM</h1>
+    <p>Mean Still Instant Messaging<br/>分布站点，快速搭建，简单设置，开始聊天</p>
+  </div>
+  <hr />
+</div>
+<div class="am-g">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+    <h3>安装</h3>
+    <hr>
+    <div class="am-btn-group">
+      <a href="https://github.com/AlinaNext/IM" class="am-btn am-btn-secondary am-btn-sm"><i class="am-icon-github am-icon-sm"></i> Github</a>
+      <a href="#" class="am-btn am-btn-success am-btn-sm"><i class="am-icon-google-plus-square am-icon-sm"></i> Google+</a>
+      <a href="#" class="am-btn am-btn-primary am-btn-sm"><i class="am-icon-stack-overflow am-icon-sm"></i> stackOverflow</a>
+    </div>
+    <br>
+    <br>
+    <div class="am-form">
+      <label for="password">安装密码:</label>
+      <input type="password" name="" id="password" value="">
+      <div class="am-cf">
+        <input type="submit" name="" value="安 装" onclick="install()" class="am-btn am-btn-primary am-btn-sm am-fl">
+		<button class="am-btn  am-btn-sm am-fr" onclick="window.location.href='../Privacy.html'">
+		隐私条款
+		</button>
+		<button class="am-btn am-btn-sm am-fr"
+  data-am-popover="{theme: 'primary', content: '密码可以在服务器根目录key.php中找到'}">
+忘记密码
+</button>
+      </div>
+    </div>
+	 <script type="text/javascript">
+        function install() {
+          $.ajax({
+  url: "install.php",
+  data: "bar=1&key="+$("input#password").val(),
+  success: function (result) {
+                    console.log(result);
+					},
+  dataType: "json"
+          });
+        }
+    </script>
+    <hr>
+    <p>© 2019 Ms. All Rights Reserved.</p>
+  </div>
+</div>
+</body>
+</html>
